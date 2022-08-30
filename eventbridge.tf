@@ -1,7 +1,7 @@
 resource "aws_cloudwatch_event_rule" "ToStopec2_event" {
 name = "ToStopec2_event"
 description = "To trigger the Lambda function which was defined to stop the ec2"
-schedule_expression = cron(30 4 ? * MON_FRI *) 
+schedule_expression = cron(30 4 ? * MON-FRI *) 
 }
 
 resource "aws_cloudwatch_event_target" "ToStopec2_event" {
