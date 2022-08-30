@@ -1,10 +1,10 @@
 locals {
-  lambda_zip_location = outputs/stopec2
+  lambda_zip_location = "outputs/stopec2.zip"
 }
 data "archive_file" "stopec2" {
   type        = "zip"
   source_file = "stopec2.py"
-  output_path = "${locals.lambda_zip_location}"
+  output_path = "${local.lambda_zip_location}"
 }
 
 resource "aws_lambda_function" "ToStopEc2" {
