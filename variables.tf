@@ -41,5 +41,5 @@ description = "Please provide secret_key"
 
 variable "region" {
 type = string
-description = "Please provide"
+description = "Please provide region"
 }
